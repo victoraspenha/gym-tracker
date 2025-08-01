@@ -15,7 +15,7 @@ const workoutPlan = {
     { name: "Cable Chest Fly", sets: 3, reps: 12 }
   ],
   Tuesday: [
-    { name: "Glute Kickback Machine", sets: 3, reps: 15 },
+    { name: "Hip Thrust Machine", sets: 3, reps: 12 },
     { name: "Smith Machine Squat", sets: 4, reps: 10 },
     { name: "Hip Abduction Machine", sets: 3, reps: 12 },
     { name: "Hip Adduction Machine", sets: 3, reps: 12 },
@@ -39,16 +39,16 @@ const workoutPlan = {
     { name: "Rope Face Pull", sets: 3, reps: 15 }
   ],
   Friday: [
-    { name: "Glute Kickback Machine", sets: 3, reps: 15 },
-    { name: "Smith Machine Deadlift", sets: 4, reps: 8 },
-    { name: "Trap Bar Deadlift", sets: 3, reps: 10 },
-    { name: "Glute Ham Raise (Machine)", sets: 3, reps: 12 },
-    { name: "Bulgarian Split Squat", sets: 3, reps: 10 },
+    { name: "Barbell Back Squat", sets: 4, reps: 8 },
+    { name: "Deadlift (Barbell or Smith Machine)", sets: 4, reps: 6 },
+    { name: "Leg Press Machine", sets: 3, reps: 10 },
     { name: "Walking Lunges (Weighted)", sets: 3, reps: 20 },
-    { name: "Reverse Lunge with Dumbbells", sets: 3, reps: 10 },
-    { name: "Kettlebell Deadlift", sets: 3, reps: 15 },
-    { name: "Hip Thrust Machine", sets: 3, reps: 12 },
-    { name: "Standing Cable Kickback", sets: 3, reps: 15 }
+    { name: "Standing Calf Raise", sets: 4, reps: 15 },
+    { name: "Leg Curl Machine", sets: 3, reps: 12 },
+    { name: "Hack Squat Machine", sets: 3, reps: 10 },
+    { name: "Romanian Deadlift (Dumbbells)", sets: 3, reps: 10 },
+    { name: "Cable Pull-Through", sets: 3, reps: 12 },
+    { name: "Kettlebell Swing", sets: 3, reps: 20 }
   ]
 };
 
@@ -68,7 +68,7 @@ function App() {
   return (
     <div className="container colorful">
       <div className="summary">
-                        <p><em>Reminder: Update your training plan by <strong>September 30, 2025</strong>.</em></p>
+        <p><em>Reminder: Update your training plan by <strong>September 30, 2025</strong>.</em></p>
       </div>
       <h1 className="title">🏋️ Gym Tracker</h1>
 
@@ -88,7 +88,6 @@ function App() {
         <thead>
           <tr>
             <th>Exercise</th>
-            
             <th>Sets</th>
             <th>Reps</th>
             <th>Done</th>
@@ -98,7 +97,6 @@ function App() {
           {exercises.map((ex, idx) => (
             <tr key={idx} className={checkedExercises[`${selectedDay}-${idx}`] ? "checked-row" : ""}>
               <td>{ex.name}</td>
-              
               <td>{ex.sets}</td>
               <td>{ex.reps}</td>
               <td>

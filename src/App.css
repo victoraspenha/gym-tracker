@@ -1,38 +1,119 @@
-.App {
+body {
+  background-color: #f4f4f4;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+}
+
+.title {
   text-align: center;
+  font-size: 2.2rem;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.day-buttons {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-wrap: wrap;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  gap: 0.75rem;
+  margin-bottom: 2rem;
+}
+
+.day-button {
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 9999px;
+  background-color: #dfe6e9;
+  color: #2c3e50;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.day-button:hover {
+  background-color: #b2bec3;
+}
+
+.day-button.active {
+  background-color: #2c3e50;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.exercise-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.exercise-table th,
+.exercise-table td {
+  border: 1px solid #ccc;
+  padding: 0.75rem;
+  text-align: left;
+}
+
+.exercise-table th {
+  background-color: #ecf0f1;
+  font-weight: 600;
+  color: #2d3436;
+}
+
+.checked-row {
+  background-color: #dff9fb;
+  text-decoration: line-through;
+  color: #2e7d32;
+}
+
+input[type="checkbox"] {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+
+.summary {
+  margin-bottom: 2rem;
+  padding: 1rem 1.5rem;
+  background-color: #fdfcdc;
+  border: 1px solid #ffeaa7;
+  border-radius: 10px;
+  font-size: 0.95rem;
+  color: #444;
+}
+
+.summary p em {
+  background-color: #fff8b5;
+  color: #6d4c41;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  display: block;
+  margin-top: 1rem;
+  font-style: normal;
+  font-weight: 600;
+  border: 1px solid #fdd835;
+}
+
+.add-date-btn {
+  margin-bottom: 1rem;
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #27ae60;
+  color: white;
+  border-radius: 6px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.add-date-btn:hover {
+  background-color: #1e8449;
 }
